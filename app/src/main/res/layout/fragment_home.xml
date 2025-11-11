@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/txtHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        android:textSize="28sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/groupButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3"/>
+
+    <LinearLayout
+        android:id="@+id/groupButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtHome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnGoLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập" />
+
+        <Space android:layout_width="0dp" android:layout_height="12dp"/>
+
+        <Button
+            android:id="@+id/btnGoRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký" />
+
+        <Space android:layout_width="0dp" android:layout_height="12dp"/>
+
+        <Button
+            android:id="@+id/btnGoForgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quên mật khẩu" />
+
+        <Space android:layout_width="0dp" android:layout_height="24dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

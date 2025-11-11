@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="vn.hcmute.group13.ui.home.HomeFragment"
+        android:label="home">
+        <action
+            android:id="@+id/action_home_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_home_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_home_to_forgot"
+            app:destination="@id/forgotFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="vn.hcmute.group13.ui.auth.LoginFragment"
+        android:label="login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_login_to_forgot"
+            app:destination="@id/forgotFragment" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="vn.hcmute.group13.ui.auth.RegisterFragment"
+        android:label="register">
+        <action
+            android:id="@+id/action_register_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="vn.hcmute.group13.ui.auth.ForgotFragment"
+        android:label="forgot">
+        <action
+            android:id="@+id/action_forgot_to_otp"
+            app:destination="@id/otpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otpFragment"
+        android:name="vn.hcmute.group13.ui.auth.OtpFragment"
+        android:label="otp">
+        <action
+            android:id="@+id/action_otp_to_reset"
+            app:destination="@id/resetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetFragment"
+        android:name="vn.hcmute.group13.ui.auth.ResetFragment"
+        android:label="reset">
+        <action
+            android:id="@+id/action_reset_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

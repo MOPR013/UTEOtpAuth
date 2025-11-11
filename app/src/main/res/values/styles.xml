@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nút bo tròn, cao 56dp -->
+    <style name="Widget.App.RoundedButton" parent="Widget.Material3.Button">
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="cornerRadius">@dimen/radius_28</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/sp_md</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+    </style>
+
+    <!-- TextInput gọn gàng -->
+    <style name="Widget.App.FilledTextField" parent="Widget.Material3.TextInputLayout.FilledBox">
+        <item name="android:layout_height">@dimen/field_height</item>
+        <item name="boxCornerRadiusTopStart">@dimen/space_12</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/space_12</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/space_12</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/space_12</item>
+        <item name="boxBackgroundColor">@color/md_theme_background</item>
+        <item name="hintTextColor">@color/md_text_hint</item>
+    </style>
+</resources>
